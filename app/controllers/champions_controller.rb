@@ -5,12 +5,12 @@ class ChampionsController < ApplicationController
   def index
     @champions = Champion.all
 
-    render json: @champions
+    render xml: { champions: @champions.as_json(root: 'champion', except: [:created_at, :updated_at]) }
   end
 
-  # GET /champions/1
+  # GET /champions/id
   def show
-    render json: @champion
+    render xml: { champion: @champion.as_json(except: [:created_at, :updated_at]) }
   end
 
   # POST /champions
@@ -18,18 +18,23 @@ class ChampionsController < ApplicationController
     @champion = Champion.new(champion_params)
 
     if @champion.save
-      render json: @champion, status: :created, location: @champion
+      # render json: @champion, status: :created, location: @champion
+      render xml: @champion.as_json
     else
-      render json: @champion.errors, status: :unprocessable_entity
+      # render json: @champion.errors, status: :unprocessable_entity
+      render xml: @champion.errors.as_json
     end
   end
 
   # PATCH/PUT /champions/1
   def update
     if @champion.update(champion_params)
-      render json: @champion
+      # render json: @champion
+      render xml: @champion.as_json
     else
-      render json: @champion.errors, status: :unprocessable_entity
+      # render json: @champion.errors, status: :unprocessable_entity
+      render xml: @champion.errors.as_json
+
     end
   end
 
