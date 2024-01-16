@@ -12,5 +12,12 @@
         "size": 0.5,
         "weight": 8.5,
         "date_capture": "2024-01-16T16:55:10.033Z"
+    },
+    {
+        "name": "graves",
+        "pv": "88.12 ou {{random_number_1}}",
+        "damage": "32.80 ou {{random_number_2}}",
+        "speed": "12.60 ou {{random_number_3}}",
+        "shield": "9.5 ou {{random_number_4}}"
     }
 ]
