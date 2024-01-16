@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pokemon_type: MyString
+  size: 1.5
+  weight: 1.5
+  date_capture: 2024-01-16 17:42:16
+
+two:
+  name: MyString
+  pokemon_type: MyString
+  size: 1.5
+  weight: 1.5
+  date_capture: 2024-01-16 17:42:16
