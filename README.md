@@ -19,7 +19,7 @@ Ce projet consiste à développer une API en Ruby on Rails qui gère deux types 
 
 Vous retrouvez des exemples de données dans le dossier 
 
-> [Data json](app\data\data.json)
+> [Data json](app/data/data.json)
 
 
 __________
