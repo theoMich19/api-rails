@@ -9,7 +9,7 @@ class ChampionsController < ApplicationController
     @champions = Champion.all
 
     # Render the list of champions in XML format.
-    render xml: { champions: @champions.as_json(root: 'champion', except: [:created_at, :updated_at]) }
+    render xml: { champions: @champions.as_json(except: [:created_at, :updated_at]) }
   end
 
   # GET /champions/:id
